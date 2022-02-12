@@ -1,0 +1,20 @@
+# permissions for end users to view oracles.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: oracle-viewer-role
+rules:
+- apiGroups:
+  - matrix.operator.com.matrix.operator.com
+  resources:
+  - oracles
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - matrix.operator.com.matrix.operator.com
+  resources:
+  - oracles/status
+  verbs:
+  - get

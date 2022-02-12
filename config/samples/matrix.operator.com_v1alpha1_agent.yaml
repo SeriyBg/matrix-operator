@@ -1,0 +1,6 @@
+apiVersion: matrix.operator.com.matrix.operator.com/v1alpha1
+kind: Agent
+metadata:
+  name: agent-sample
+spec:
+  # Add fields here

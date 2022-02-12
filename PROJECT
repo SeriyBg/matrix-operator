@@ -1,0 +1,37 @@
+domain: matrix.operator.com
+layout:
+- go.kubebuilder.io/v3
+plugins:
+  manifests.sdk.operatorframework.io/v2: {}
+  scorecard.sdk.operatorframework.io/v2: {}
+projectName: matrix-operator
+repo: github.com/SeriyBg/matrix-operator
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: matrix.operator.com
+  group: matrix.operator.com
+  kind: Agent
+  path: github.com/SeriyBg/matrix-operator/api/v1alpha1
+  version: v1alpha1
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: matrix.operator.com
+  group: matrix.operator.com
+  kind: Architect
+  path: github.com/SeriyBg/matrix-operator/api/v1alpha1
+  version: v1alpha1
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: matrix.operator.com
+  group: matrix.operator.com
+  kind: Oracle
+  path: github.com/SeriyBg/matrix-operator/api/v1alpha1
+  version: v1alpha1
+version: "3"

@@ -1,0 +1,6 @@
+apiVersion: matrix.operator.com.matrix.operator.com/v1alpha1
+kind: Oracle
+metadata:
+  name: oracle-sample
+spec:
+  # Add fields here

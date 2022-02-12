@@ -1,0 +1,24 @@
+# permissions for end users to edit architects.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: architect-editor-role
+rules:
+- apiGroups:
+  - matrix.operator.com.matrix.operator.com
+  resources:
+  - architects
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - matrix.operator.com.matrix.operator.com
+  resources:
+  - architects/status
+  verbs:
+  - get

@@ -1,0 +1,12 @@
+apiVersion: matrix.operator.com/v1alpha1
+kind: Merovingian
+metadata:
+  labels:
+    app.kubernetes.io/name: merovingian
+    app.kubernetes.io/instance: merovingian-sample
+    app.kubernetes.io/part-of: matrix-operator2
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: matrix-operator2
+  name: merovingian-sample
+spec:
+  # TODO(user): Add fields here

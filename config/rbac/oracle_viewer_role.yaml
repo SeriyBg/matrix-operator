@@ -1,0 +1,27 @@
+# permissions for end users to view oracles.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: clusterrole
+    app.kubernetes.io/instance: oracle-viewer-role
+    app.kubernetes.io/component: rbac
+    app.kubernetes.io/created-by: matrix-operator2
+    app.kubernetes.io/part-of: matrix-operator2
+    app.kubernetes.io/managed-by: kustomize
+  name: oracle-viewer-role
+rules:
+- apiGroups:
+  - matrix.operator.com
+  resources:
+  - oracles
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - matrix.operator.com
+  resources:
+  - oracles/status
+  verbs:
+  - get

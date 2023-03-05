@@ -9,4 +9,44 @@ metadata:
     app.kubernetes.io/created-by: matrix-operator2
   name: oracle-sample
 spec:
-  # TODO(user): Add fields here
+  config:
+    names:
+      - "123neo"
+      - "Apoc"
+      - "Choi"
+      - "DuJour"
+      - "Cypher"
+      - "Dozer"
+      - "Morpheus"
+      - "Mouse"
+      - "Neo"
+      - "Rhineheart"
+      - "Switch"
+      - "Tank"
+      - "Trinity"
+      - "Bane"
+      - "Cas"
+      - "Ghost"
+      - "Kid"
+      - "Link"
+      - "Lock"
+      - "Maggie"
+      - "Niobe"
+      - "Zee"
+      - "Sparks"
+      - "Bugs"
+    predictions:
+      - "Being The one Is Just like Being In Love..."
+      - "Know Thyself."
+      - "Change Always Is..."
+      - "You've Already Made The Choice. You're Here To Understand Why You've Made It."
+      - "What Do All Men With Power Want? More Power."
+      - "Everything That Has A Beginning Has An End."
+      - "Would You Still Have Broken It If I Hadn't Said Anything?"
+      - "In One Hand You'll Have Morpheus' Life And In The Other Hand You'll Have Your Own."
+      - "You Just Have To Make Up Your Own Damn Mind..."
+      - "You're cuter than I thought. I can see why she likes you."
+      - "I'd ask you to sit down, but, you're not going to anyway. And don't worry about the vase."
+      - "But... you already know what I'm going to tell you."
+      - "Sorry, kid. You got the gift, but it looks like you're waiting for something."
+

@@ -117,6 +117,10 @@ func main() {
 		setupLog.Error(err, "unable to create controller", "controller", "Twins")
 		os.Exit(1)
 	}
+	if err = (&matrixv1alpha1.Oracle{}).SetupWebhookWithManager(mgr); err != nil {
+		setupLog.Error(err, "unable to create webhook", "webhook", "Oracle")
+		os.Exit(1)
+	}
 	//+kubebuilder:scaffold:builder
 
 	if err := mgr.AddHealthzCheck("healthz", healthz.Ping); err != nil {

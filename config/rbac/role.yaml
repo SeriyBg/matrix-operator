@@ -45,7 +45,7 @@ rules:
   - update
   - watch
 - apiGroups:
-  - matrix.operator.com.matrix.operator.com
+  - matrix.operator.com
   resources:
   - architects
   verbs:
@@ -57,13 +57,13 @@ rules:
   - update
   - watch
 - apiGroups:
-  - matrix.operator.com.matrix.operator.com
+  - matrix.operator.com
   resources:
   - architects/finalizers
   verbs:
   - update
 - apiGroups:
-  - matrix.operator.com.matrix.operator.com
+  - matrix.operator.com
   resources:
   - architects/status
   verbs:
@@ -71,7 +71,7 @@ rules:
   - patch
   - update
 - apiGroups:
-  - matrix.operator.com.matrix.operator.com
+  - matrix.operator.com
   resources:
   - merovingians
   verbs:
@@ -83,13 +83,13 @@ rules:
   - update
   - watch
 - apiGroups:
-  - matrix.operator.com.matrix.operator.com
+  - matrix.operator.com
   resources:
   - merovingians/finalizers
   verbs:
   - update
 - apiGroups:
-  - matrix.operator.com.matrix.operator.com
+  - matrix.operator.com
   resources:
   - merovingians/status
   verbs:
@@ -97,7 +97,7 @@ rules:
   - patch
   - update
 - apiGroups:
-  - matrix.operator.com.matrix.operator.com
+  - matrix.operator.com
   resources:
   - oracles
   verbs:
@@ -109,13 +109,13 @@ rules:
   - update
   - watch
 - apiGroups:
-  - matrix.operator.com.matrix.operator.com
+  - matrix.operator.com
   resources:
   - oracles/finalizers
   verbs:
   - update
 - apiGroups:
-  - matrix.operator.com.matrix.operator.com
+  - matrix.operator.com
   resources:
   - oracles/status
   verbs:
@@ -123,7 +123,7 @@ rules:
   - patch
   - update
 - apiGroups:
-  - matrix.operator.com.matrix.operator.com
+  - matrix.operator.com
   resources:
   - twins
   verbs:
@@ -135,13 +135,13 @@ rules:
   - update
   - watch
 - apiGroups:
-  - matrix.operator.com.matrix.operator.com
+  - matrix.operator.com
   resources:
   - twins/finalizers
   verbs:
   - update
 - apiGroups:
-  - matrix.operator.com.matrix.operator.com
+  - matrix.operator.com
   resources:
   - twins/status
   verbs:

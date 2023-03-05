@@ -40,9 +40,9 @@ type OracleReconciler struct {
 	Scheme *runtime.Scheme
 }
 
-//+kubebuilder:rbac:groups=matrix.operator.com.matrix.operator.com,resources=oracles,verbs=get;list;watch;create;update;patch;delete
-//+kubebuilder:rbac:groups=matrix.operator.com.matrix.operator.com,resources=oracles/status,verbs=get;update;patch
-//+kubebuilder:rbac:groups=matrix.operator.com.matrix.operator.com,resources=oracles/finalizers,verbs=update
+//+kubebuilder:rbac:groups=matrix.operator.com,resources=oracles,verbs=get;list;watch;create;update;patch;delete
+//+kubebuilder:rbac:groups=matrix.operator.com,resources=oracles/status,verbs=get;update;patch
+//+kubebuilder:rbac:groups=matrix.operator.com,resources=oracles/finalizers,verbs=update
 // ClusterRole inherited from Hazelcast ClusterRole
 //+kubebuilder:rbac:groups="",resources=endpoints;pods;nodes;services,verbs=get;list
 // Role related to Reconcile()

@@ -41,9 +41,9 @@ type TwinsReconciler struct {
 	Scheme *runtime.Scheme
 }
 
-//+kubebuilder:rbac:groups=matrix.operator.com.matrix.operator.com,resources=twins,verbs=get;list;watch;create;update;patch;delete
-//+kubebuilder:rbac:groups=matrix.operator.com.matrix.operator.com,resources=twins/status,verbs=get;update;patch
-//+kubebuilder:rbac:groups=matrix.operator.com.matrix.operator.com,resources=twins/finalizers,verbs=update
+//+kubebuilder:rbac:groups=matrix.operator.com,resources=twins,verbs=get;list;watch;create;update;patch;delete
+//+kubebuilder:rbac:groups=matrix.operator.com,resources=twins/status,verbs=get;update;patch
+//+kubebuilder:rbac:groups=matrix.operator.com,resources=twins/finalizers,verbs=update
 // ClusterRole inherited from Hazelcast ClusterRole
 //+kubebuilder:rbac:groups="",resources=endpoints;pods;nodes;services,verbs=get;list
 // Role related to Reconcile()

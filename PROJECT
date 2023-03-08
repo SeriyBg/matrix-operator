@@ -47,4 +47,13 @@ resources:
   kind: Twins
   path: github.com/SeriyBg/matrix-operator/api/v1alpha1
   version: v1alpha1
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: operator.com
+  group: matrix
+  kind: Agent
+  path: github.com/SeriyBg/matrix-operator/api/v1alpha1
+  version: v1alpha1
 version: "3"

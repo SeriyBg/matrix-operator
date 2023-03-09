@@ -5,4 +5,5 @@ resources:
 - matrix_v1alpha1_merovingian.yaml
 - matrix_v1alpha1_twins.yaml
 - matrix_v1alpha1_agent.yaml
+- matrix_v1beta1_agent.yaml
 #+kubebuilder:scaffold:manifestskustomizesamples

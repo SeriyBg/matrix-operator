@@ -1,4 +1,4 @@
-apiVersion: matrix.operator.com/v1alpha1
+apiVersion: matrix.operator.com/v1beta1
 kind: Agent
 metadata:
   labels:
@@ -9,7 +9,10 @@ metadata:
     app.kubernetes.io/created-by: matrix-operator2
   name: agent-sample
 spec:
-  names:
-    - Smith
-    - Brown
-    - Jones
+  agents:
+    - name: Smith
+      health: 100
+    - name: Brown
+      health: 80
+    - name: Jones
+      health: 85

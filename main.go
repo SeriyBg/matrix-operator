@@ -32,6 +32,7 @@ import (
 	"sigs.k8s.io/controller-runtime/pkg/log/zap"
 
 	matrixv1alpha1 "github.com/SeriyBg/matrix-operator/api/v1alpha1"
+	matrixv1beta1 "github.com/SeriyBg/matrix-operator/api/v1beta1"
 	"github.com/SeriyBg/matrix-operator/controllers"
 	//+kubebuilder:scaffold:imports
 )
@@ -45,6 +46,7 @@ func init() {
 	utilruntime.Must(clientgoscheme.AddToScheme(scheme))
 
 	utilruntime.Must(matrixv1alpha1.AddToScheme(scheme))
+	utilruntime.Must(matrixv1beta1.AddToScheme(scheme))
 	//+kubebuilder:scaffold:scheme
 }
 
@@ -121,11 +123,12 @@ func main() {
 		setupLog.Error(err, "unable to create webhook", "webhook", "Oracle")
 		os.Exit(1)
 	}
-	if err = (&controllers.AgentReconciler{
-		Client: mgr.GetClient(),
-		Scheme: mgr.GetScheme(),
-	}).SetupWithManager(mgr); err != nil {
+	if err = controllers.NewAgentReconciler(mgr.GetClient(), mgr.GetScheme()).SetupWithManager(mgr); err != nil {
 		setupLog.Error(err, "unable to create controller", "controller", "Agent")
+		os.Exit(1)
+	}
+	if err = (&matrixv1beta1.Agent{}).SetupWebhookWithManager(mgr); err != nil {
+		setupLog.Error(err, "unable to create webhook", "webhook", "Agent")
 		os.Exit(1)
 	}
 	//+kubebuilder:scaffold:builder

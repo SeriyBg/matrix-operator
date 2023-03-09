@@ -47,6 +47,32 @@ rules:
 - apiGroups:
   - matrix.operator.com
   resources:
+  - agents
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - matrix.operator.com
+  resources:
+  - agents/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - matrix.operator.com
+  resources:
+  - agents/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - matrix.operator.com
+  resources:
   - architects
   verbs:
   - create

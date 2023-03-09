@@ -56,4 +56,15 @@ resources:
   kind: Agent
   path: github.com/SeriyBg/matrix-operator/api/v1alpha1
   version: v1alpha1
+- api:
+    crdVersion: v1
+    namespaced: true
+  domain: operator.com
+  group: matrix
+  kind: Agent
+  path: github.com/SeriyBg/matrix-operator/api/v1beta1
+  version: v1beta1
+  webhooks:
+    conversion: true
+    webhookVersion: v1
 version: "3"

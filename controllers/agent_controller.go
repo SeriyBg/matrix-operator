@@ -197,7 +197,7 @@ func createServicePerPod(ctx context.Context, c client.Client, agent *matrixv1be
 	for i, ag := range agent.Spec.Agents {
 		svc := &corev1.Service{
 			ObjectMeta: metav1.ObjectMeta{
-				Name:      agent.Name + "-" + strings.ToLower(string(ag.Name)),
+				Name:      agent.ProgramName() + "-" + strings.ToLower(string(ag.Name)),
 				Namespace: agent.GetNamespace(),
 				Labels:    labels(agent),
 			},

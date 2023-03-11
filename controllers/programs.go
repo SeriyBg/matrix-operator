@@ -20,7 +20,7 @@ type MatrixProgram interface {
 
 func metadata(cr MatrixProgram) metav1.ObjectMeta {
 	return metav1.ObjectMeta{
-		Name:      cr.GetName(),
+		Name:      cr.ProgramName(),
 		Namespace: cr.GetNamespace(),
 		Labels:    labels(cr),
 	}

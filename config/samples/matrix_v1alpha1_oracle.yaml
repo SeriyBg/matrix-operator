@@ -7,11 +7,11 @@ metadata:
     app.kubernetes.io/part-of: matrix-operator2
     app.kubernetes.io/managed-by: kustomize
     app.kubernetes.io/created-by: matrix-operator2
-  name: oracle-sample
+  name: oracle
 spec:
   config:
     names:
-      - "123neo"
+      - "Neo"
       - "Apoc"
       - "Choi"
       - "DuJour"

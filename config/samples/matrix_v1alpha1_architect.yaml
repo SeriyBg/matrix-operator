@@ -7,6 +7,4 @@ metadata:
     app.kubernetes.io/part-of: matrix-operator2
     app.kubernetes.io/managed-by: kustomize
     app.kubernetes.io/created-by: matrix-operator2
-  name: architect-sample
-spec:
-  # TODO(user): Add fields here
+  name: architect

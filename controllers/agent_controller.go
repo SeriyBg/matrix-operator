@@ -77,7 +77,7 @@ func (a *agentWatcher) Stop() {
 
 type AgentHealth struct {
 	Name   matrixv1beta1.AgentName `json:"name"`
-	Health int                     `json:"health"`
+	Health int32                   `json:"health"`
 }
 
 //+kubebuilder:rbac:groups=matrix.operator.com,resources=agents,verbs=get;list;watch;create;update;patch;delete
@@ -342,7 +342,7 @@ func (r *AgentReconciler) tryInitAgent(ctx context.Context, req ctrl.Request, lo
 				agentsStatuses := make([]matrixv1beta1.SingeAgentStatus, 0, 0)
 				for _, agent := range a.Status.Agents {
 					if agent.Name == health.Name {
-						agent.Health = int32(health.Health)
+						agent.Health = health.Health
 						foundAgent = true
 					}
 					agentsStatuses = append(agentsStatuses, agent)
@@ -353,7 +353,7 @@ func (r *AgentReconciler) tryInitAgent(ctx context.Context, req ctrl.Request, lo
 				if !foundAgent {
 					agentsStatuses = append(agentsStatuses, matrixv1beta1.SingeAgentStatus{
 						Name:   health.Name,
-						Health: int32(health.Health),
+						Health: health.Health,
 					})
 					if health.Health > 0 {
 						agentsAlive += 1

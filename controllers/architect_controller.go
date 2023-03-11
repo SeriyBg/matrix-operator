@@ -47,7 +47,7 @@ type ArchitectReconciler struct {
 // ClusterRole inherited from Hazelcast ClusterRole
 //+kubebuilder:rbac:groups="",resources=endpoints;pods;nodes;services,verbs=get;list
 // Role related to Reconcile()
-//+kubebuilder:rbac:groups="",resources=events;services;serviceaccounts;configmaps;pods,verbs=get;list;watch;create;update;patch;delete
+//+kubebuilder:rbac:groups="",resources=events;services;serviceaccounts;configmaps;namespaces;pods,verbs=get;list;watch;create;update;patch;delete
 //+kubebuilder:rbac:groups="apps",resources=statefulsets;deployments,verbs=get;list;watch;create;update;patch;delete
 // ClusterRole related to Reconcile()
 //+kubebuilder:rbac:groups="rbac.authorization.k8s.io",resources=clusterroles;clusterrolebindings,verbs=get;list;watch;create;update;patch;delete

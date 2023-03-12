@@ -69,6 +69,11 @@ func (r *MerovingianReconciler) Reconcile(ctx context.Context, req ctrl.Request)
 		logger.Error(err, "No Agent found!")
 	}
 
+	err = r.reconcilePermissions(ctx, m, logger)
+	if err != nil {
+		return ctrl.Result{}, err
+	}
+
 	ls := labels(m)
 
 	dep := &v1.Deployment{
@@ -81,6 +86,7 @@ func (r *MerovingianReconciler) Reconcile(ctx context.Context, req ctrl.Request)
 			Template: corev1.PodTemplateSpec{
 				ObjectMeta: metadata(m),
 				Spec: corev1.PodSpec{
+					ServiceAccountName: m.Name,
 					Containers: []corev1.Container{{
 						Name:  m.Name,
 						Image: "sbishyr/matrix-merovingian:0.1",

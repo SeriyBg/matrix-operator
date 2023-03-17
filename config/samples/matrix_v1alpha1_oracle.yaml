@@ -11,7 +11,7 @@ metadata:
 spec:
   config:
     names:
-      - "Neo"
+      - "123Neo"
       - "Apoc"
       - "Choi"
       - "DuJour"
@@ -27,7 +27,7 @@ spec:
       - "Bane"
       - "Cas"
       - "Ghost"
-      - "Kid"
+      - "Kid780"
       - "Link"
       - "Lock"
       - "Maggie"

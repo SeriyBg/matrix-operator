@@ -50,6 +50,7 @@ type SingeAgentStatus struct {
 //+kubebuilder:object:root=true
 //+kubebuilder:subresource:status
 //+kubebuilder:printcolumn:name="Alive",type="string",JSONPath=".status.agentsAlive",description="Current number of alive agents out of all"
+// +kubebuilder:deprecatedversion:warning="matrix.operator.com/v1beta1 Agnet is deprecated. Please migrate to matrix.operator.com/v1beta1 Agent"
 
 // Agent is the Schema for the agents API
 type Agent struct {

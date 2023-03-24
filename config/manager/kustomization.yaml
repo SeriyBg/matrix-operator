@@ -5,4 +5,4 @@ kind: Kustomization
 images:
 - name: controller
   newName: sbishyr/matrix-operator
-  newTag: "1.15"
+  newTag: "1.20"

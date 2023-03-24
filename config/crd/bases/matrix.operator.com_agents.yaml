@@ -20,6 +20,9 @@ spec:
       jsonPath: .status.agentsAlive
       name: Alive
       type: string
+    deprecated: true
+    deprecationWarning: matrix.operator.com/v1beta1 Agnet is deprecated. Please migrate
+      to matrix.operator.com/v1beta1 Agent
     name: v1alpha1
     schema:
       openAPIV3Schema:

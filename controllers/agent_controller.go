@@ -337,7 +337,6 @@ func (r *AgentReconciler) tryInitAgent(ctx context.Context, req ctrl.Request, lo
 					continue
 				}
 				foundAgent := false
-				agentsAlive := 0
 
 				agentsStatuses := make([]matrixv1beta1.SingeAgentStatus, 0, 0)
 				for _, agent := range a.Status.Agents {
@@ -346,16 +345,16 @@ func (r *AgentReconciler) tryInitAgent(ctx context.Context, req ctrl.Request, lo
 						foundAgent = true
 					}
 					agentsStatuses = append(agentsStatuses, agent)
-					if health.Health > 0 {
-						agentsAlive += 1
-					}
 				}
 				if !foundAgent {
 					agentsStatuses = append(agentsStatuses, matrixv1beta1.SingeAgentStatus{
 						Name:   health.Name,
 						Health: health.Health,
 					})
-					if health.Health > 0 {
+				}
+				agentsAlive := 0
+				for _, as := range agentsStatuses {
+					if as.Health > 0 {
 						agentsAlive += 1
 					}
 				}

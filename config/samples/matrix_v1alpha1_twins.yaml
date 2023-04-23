@@ -1,10 +1,4 @@
 apiVersion: matrix.operator.com/v1alpha1
 kind: Twins
 metadata:
-  labels:
-    app.kubernetes.io/name: twins
-    app.kubernetes.io/instance: twins-sample
-    app.kubernetes.io/part-of: matrix-operator2
-    app.kubernetes.io/managed-by: kustomize
-    app.kubernetes.io/created-by: matrix-operator2
   name: twins

@@ -1,12 +1,6 @@
 apiVersion: matrix.operator.com/v1alpha1
 kind: Agent
 metadata:
-  labels:
-    app.kubernetes.io/name: agent
-    app.kubernetes.io/instance: agent-sample
-    app.kubernetes.io/part-of: matrix-operator2
-    app.kubernetes.io/managed-by: kustomize
-    app.kubernetes.io/created-by: matrix-operator2
   name: agent
 spec:
   names:
